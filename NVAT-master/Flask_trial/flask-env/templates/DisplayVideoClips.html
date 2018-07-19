@@ -1,0 +1,24 @@
+<html>
+<head>
+	<style media="screen" type="text/css">
+
+		p {
+			font-size: 20px;
+		}
+
+		a {
+			color: hotpink;
+		}
+	</style>
+</head>
+
+<body background="/static/bgim2.jpg" text="white">
+	<h3> <a href="{{ url_for('home')}}"> Home </a> </h3>
+	{% for clip in idlist %}
+		<div><p>Video File Path : <b>{{ clip.file_path }}</b></p></div>
+		<div><p>Video Start Time : <b>{{ clip.start_time }}</b></p></div>
+		<div><p>Video End Time : <b>{{ clip.end_time }}</b></p></div>
+		<a href="playVideo?path={{clip.file_path}}"> Click to view video </a>
+  {% endfor %}
+</body>
+</html>

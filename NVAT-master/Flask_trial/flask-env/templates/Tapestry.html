@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> NVAT </title>
+  <style media="screen" type="text/css">
+  h1{
+  color: white;
+  font-size: 30px;
+  font-family: georgia, ariel;
+  font-weight: bold;
+}
+  h4, h5, td{
+    color: black;
+    font-family: georgia, ariel;
+    font-weight: bold;
+  }
+
+.titles {
+  color:#E9E9E9;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.notes {
+  color: #E9E9E9;
+  font-size: 20px;
+}
+
+.highlight {
+  color: red;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  font-size: 20px;
+}
+
+
+p {
+  color:#E9E9E9;
+  font-size: 20px;
+}
+
+table {
+  color:red;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+  font-size: 10px;
+}
+
+.wrapper {
+  background-color: #222930;
+}
+</style>
+</head>
+<body class = "wrapper" background="/static/bgim3.jpg">
+  <center>
+    <div>
+
+      <h1> Tapestry of intruder {{ intid }} </h1>
+      <h4> Time range </h4>
+      <h5> Time 1 : {{ t1 }}</h5>
+      <h5> Time 2 : {{ t2 }}</h5>
+<!--
+      {% for video_data in video_list %}
+      <table>
+
+        <tr>
+          <td>
+            <video width="320" height="240" controls="controls">
+              <source src="/static/{{video_data.file_path}}" type="video/mp4">
+            </video>
+          </td>
+          <td>id : {{ video_data.id }}</td>
+          <td>camera_id : {{ video_data.camera_id }}</td>
+          <td>start_time : {{ video_data.start_time }}</td>
+          <td>end_time :   {{ video_data.end_time }}</td>
+          <td>file_path :  {{ video_data.file_path }}</td>
+
+
+       </li>
+
+      </ul>
+      {%endfor%}
+      <h1> {{ tapestry }} </h1>
+-->
+      <video width="320" height="240" controls="controls">
+        <source src="/static/{{ tapestry }}" type="video/mp4">
+      </video>
+
+      <h3> <a href="{{ url_for('home')}}"> Home </a> </h3>
+
+    </div>
+  </center>
+</body>
+</html>
